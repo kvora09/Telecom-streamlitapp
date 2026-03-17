@@ -141,43 +141,43 @@ telecom.head()
 # Creating dummy variables for the variable 'MultipleLines'
 ml = pd.get_dummies(telecom['MultipleLines'], prefix='MultipleLines')
 # Dropping MultipleLines_No phone service column
-ml1 = ml.drop(['MultipleLines_No phone service'], 1)
+ml1 = ml.drop(['MultipleLines_No phone service'],axis=1)
 #Adding the results to the master dataframe
 telecom = pd.concat([telecom,ml1], axis=1)
 
 # Creating dummy variables for the variable 'OnlineSecurity'.
 os = pd.get_dummies(telecom['OnlineSecurity'], prefix='OnlineSecurity')
-os1 = os.drop(['OnlineSecurity_No internet service'], 1)
+os1 = os.drop(['OnlineSecurity_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,os1], axis=1)
 
 # Creating dummy variables for the variable 'OnlineBackup'.
 ob = pd.get_dummies(telecom['OnlineBackup'], prefix='OnlineBackup')
-ob1 = ob.drop(['OnlineBackup_No internet service'], 1)
+ob1 = ob.drop(['OnlineBackup_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,ob1], axis=1)
 
 # Creating dummy variables for the variable 'DeviceProtection'. 
 dp = pd.get_dummies(telecom['DeviceProtection'], prefix='DeviceProtection')
-dp1 = dp.drop(['DeviceProtection_No internet service'], 1)
+dp1 = dp.drop(['DeviceProtection_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,dp1], axis=1)
 
 # Creating dummy variables for the variable 'TechSupport'. 
 ts = pd.get_dummies(telecom['TechSupport'], prefix='TechSupport')
-ts1 = ts.drop(['TechSupport_No internet service'], 1)
+ts1 = ts.drop(['TechSupport_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,ts1], axis=1)
 
 # Creating dummy variables for the variable 'StreamingTV'.
 st =pd.get_dummies(telecom['StreamingTV'], prefix='StreamingTV')
-st1 = st.drop(['StreamingTV_No internet service'], 1)
+st1 = st.drop(['StreamingTV_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,st1], axis=1)
 
 # Creating dummy variables for the variable 'StreamingMovies'. 
 sm = pd.get_dummies(telecom['StreamingMovies'], prefix='StreamingMovies')
-sm1 = sm.drop(['StreamingMovies_No internet service'], 1)
+sm1 = sm.drop(['StreamingMovies_No internet service'], axis=1)
 # Adding the results to the master dataframe
 telecom = pd.concat([telecom,sm1], axis=1)
 
@@ -202,7 +202,7 @@ telecom.head()
 
 
 telecom = telecom.drop(['Contract','PaymentMethod','gender','MultipleLines','InternetService', 'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
-       'TechSupport', 'StreamingTV', 'StreamingMovies'], 1)
+       'TechSupport', 'StreamingTV', 'StreamingMovies'], axis=1)
 
 
 # In[ ]:
