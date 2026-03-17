@@ -353,7 +353,6 @@ churn
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-get_ipython().run_line_magic('matplotlib', 'inline')
 
 
 # In[ ]:
