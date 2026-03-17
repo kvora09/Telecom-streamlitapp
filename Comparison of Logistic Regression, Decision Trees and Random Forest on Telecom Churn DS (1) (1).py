@@ -393,9 +393,9 @@ corr_matrix
 
 
 X_test = X_test.drop(['MultipleLines_No','OnlineSecurity_No','OnlineBackup_No','DeviceProtection_No','TechSupport_No',
-                       'StreamingTV_No','StreamingMovies_No'], 1)
+                       'StreamingTV_No','StreamingMovies_No'],axis=1)
 X_train = X_train.drop(['MultipleLines_No','OnlineSecurity_No','OnlineBackup_No','DeviceProtection_No','TechSupport_No',
-                         'StreamingTV_No','StreamingMovies_No'], 1)
+                         'StreamingTV_No','StreamingMovies_No'], axis=1)
 
 
 # In[ ]:
